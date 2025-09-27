@@ -1,36 +1,66 @@
-
 import "./App.css";
-
-function App() {
+import Navber from "./component/Navber";
+import Banner from "./banner/Banner";
+import Footer from "./component/Footer/Footer"
+import Functionality from "./component/Functionality/Functionality"
+import { useState } from "react";
   
 
+
+
+const CostomerData = async ()=>{
+  const res = await fetch("/Coustmer.json")
+  return res.json()
+}          
+const CostomersPromis = CostomerData()
+
+
+
+function App() {
+  // const [TicatCostomer,setTicatCostomer]=useState([...CostomersPromis])
+  // console.log(setTicatCostomer)
+ 
+  const [InProgress,setInProgress] = useState(0);
+  const [Resolve,setResolve] = useState(0); 
+  const [selectCard,setselectCard] = useState([])
+  const [TasksResolv,setTasksResolv]=useState([])
+  console.log(TasksResolv)
+  const [costomerRemove,setcostomerRemove]=useState([])
+  console.log(costomerRemove)
+
+
+
+  const RemoveCard =(p)=>{
+    const Deletecard = selectCard.filter(card=>card !== p)
+    setselectCard(Deletecard)
+    const DeleteCostomer = costomerRemove.filter(costomer=>costomer.title!==p)
+    setcostomerRemove(DeleteCostomer)
+    console.log(DeleteCostomer )
+  }
+  const RemoveCostomer =()=>{
+    
+
+    
+    // const deletItem =costomerRemove.filter(item=>item.title!==title)
+    // setcostomerRemove(deletItem)
+    // const Deletecostomor = costomerRemove.filter(costomer=>console.log(costomer.title))
+    // 
+  }
+ 
+  
+  
+  
   return (
     <>
-      <div class="navbar bg-base-100 shadow-sm">
-        <div class="flex-1">
-          <a class="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div class="flex-none">
-          <button class="btn btn-square btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              class="inline-block h-5 w-5 stroke-current"
-            >
-              {" "}
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-              ></path>{" "}
-            </svg>
-          </button>
-        </div>
-      </div>{" "}
+      <Navber></Navber>
+      <Banner InProgress={InProgress} Resolve={Resolve}></Banner>
+      <Functionality CostomersPromis={CostomersPromis} InProgress={InProgress} setInProgress={setInProgress} selectCard={selectCard} setselectCard={setselectCard} Resolve={Resolve} setResolve={setResolve} TasksResolv={TasksResolv} setTasksResolv={setTasksResolv} RemoveCard={RemoveCard}  RemoveCostomer={ RemoveCostomer} costomerRemove={costomerRemove} setcostomerRemove={setcostomerRemove}></Functionality>
+      <Footer></Footer>
+     
+      
     </>
   );
 }
+
 
 export default App;

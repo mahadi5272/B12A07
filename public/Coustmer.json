@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "Customer unable to login to the account using correct credentials.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-25T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Payment Failure",
+    "description": "Transaction failed during checkout, amount deducted from bank.",
+    "customer": "Fatema Begum",
+    "priority": "Critical",
+    "status": "Pending",
+    "createdAt": "2025-09-24T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Account Suspension",
+    "description": "Customer account suspended without any notification.",
+    "customer": "Shakil Ahmed",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-23T09:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Refund Request",
+    "description": "Customer requested refund for an order that was delivered late.",
+    "customer": "Nadia Parvin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-22T16:00:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Feature Request",
+    "description": "Customer suggested adding dark mode feature in the app.",
+    "customer": "Tanvir Hossain",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-21T11:20:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Bug Report",
+    "description": "App crashes when trying to upload profile picture.",
+    "customer": "Mahdi Alam",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2025-09-25T08:50:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Password Reset",
+    "description": "Customer unable to reset password via email link.",
+    "customer": "Sadia Rahman",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-20T13:15:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Order Tracking Issue",
+    "description": "Tracking information not updated for the last 3 days.",
+    "customer": "Imran Khan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-19T17:40:00Z"
+  },
+  {
+    "id": 9,
+    "title": "App Performance",
+    "description": "App is running slow on Android version 12.",
+    "customer": "Laila Ahmed",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2025-09-18T12:05:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Email Notifications",
+    "description": "Customer not receiving order update emails.",
+    "customer": "Rafiq Islam",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-17T09:30:00Z"
+  }
+]

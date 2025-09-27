@@ -11,9 +11,10 @@ const Banner = ({ InProgress, Resolve }) => {
         >
           <div
             style={{
-              backgroundImage: `url(${bg})`,
-              backgroundSize: "200px 150px",
-              backgroundRepeat: "no-repeat",
+              backgroundImage: `url(${bg}), url(${bg})`,
+              backgroundSize: "200px 150px, 200px 150px",
+              backgroundRepeat: "no-repeat, no-repeat",
+              backgroundPosition: "left top, right bottom"
             }}
             className="p-8 w-full"
           >
@@ -24,9 +25,10 @@ const Banner = ({ InProgress, Resolve }) => {
       </div>
       <div  className=" text-center  bg-gradient-to-r from-[#54CF68] to-[#00827A]">
         <div            style={{
-              backgroundImage: `url(${bg})`,
-              backgroundSize: "200px 150px",
-              backgroundRepeat: "no-repeat",
+              backgroundImage: `url(${bg}),url(${bg})`,
+              backgroundSize: "200px 150px, 200px 150px",
+              backgroundRepeat: "no-repeat, no-repeat",
+              backgroundPosition: "left top, right bottom"
             }} className="p-8 w-full">
           <p className=" text-white font-bold ">Resolved</p>
           <p className=" text-white font-bold text-[25px]">{Resolve}</p>

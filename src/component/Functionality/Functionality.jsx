@@ -1,18 +1,35 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import CostomerCard from "../../CostomerCard/CostomerCard";
 import Tasks from "../Tasks/Tasks";
 import DeleteTask from "../DeleteTask/DeleteTask"
 import TaskResolve from "../TaskResolv/TaskResolv"
 
 
-const Functionality = ({ CostomersPromis, InProgress, setInProgress,selectCard,setselectCard,TasksResolv,setTasksResolv,Resolve,setResolve,RemoveCard, RemoveCostomer ,costomerRemove,setcostomerRemove}) => {
+const Functionality = ({ CostomersPromis, InProgress, setInProgress,TasksResolv,setTasksResolv,Resolve,setResolve, RemoveCostomer ,costomerRemove,setcostomerRemove}) => {
   const useCostomer = use(CostomersPromis);
+  const [costomerTickt,setcostomerTickt]=useState([...useCostomer])
+  const [selectCard,setselectCard] = useState([])
+
+
+    const RemoveCard =(p)=>{
+    const Deletecard = selectCard.filter(card=>card !== p)
+    setselectCard(Deletecard)
+    const DeleteCostomer = costomerTickt.filter(costomer=>costomer.title!==p)
+    setcostomerTickt(DeleteCostomer)
+    console.log(DeleteCostomer )
+  }
+
+
+
+
+
+
   return (
     <div className="max-sm:grid-cols-1 grid grid-cols-2 gap-5 max-w-[1200px] m-auto">
       <div className="">
         <h1 className=" font-bold">Customer Tickets</h1>
         <div className="max-sm:grid-cols-1  grid grid-cols-2 gap-10 ">
-          {useCostomer.map((costomer) => (
+          {costomerTickt.map((costomer) => (
             
             <CostomerCard
               costomer={costomer}

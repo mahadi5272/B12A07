@@ -1,16 +1,41 @@
-# React + Vite
+# React Basics Cheat Sheet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A quick reference for essential React concepts including JSX, state, props, hooks, state sharing, and event handling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. What is JSX and why is it used?
 
-## React Compiler
+**JSX (JavaScript XML)** is a syntax extension for JavaScript that allows writing HTML-like code inside JavaScript.  
+It is used in React to describe the UI structure in a readable way and combine JavaScript logic with HTML layout.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## 2. What is the difference between State and Props?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+State
+
+Local, mutable data managed inside a component.
+
+Can change using useState or other hooks.
+
+Private to the component.
+## 3. What is the useState hook, and how does it work?
+
+useState is a React hook that allows functional components to have state.
+It returns an array with two elements: the current state value and a function to update that state.
+## 4. How can you share state between components in React?
+
+1. Lifting State Up
+Move state to a common parent and pass it as props.
+2. Context API
+Allows global state sharing without prop drilling.
+
+3. State Management Libraries
+Examples: Redux, Zustand, Recoil.
+## 5. How is event handling done in React?
+
+Use camelCase for events (onClick, onChange)
+
+Pass a function reference, not a string
+
+React uses synthetic events for cross-browser compatibility

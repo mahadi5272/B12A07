@@ -12,6 +12,7 @@ const Functionality = ({ CostomersPromis, InProgress, setInProgress,TasksResolv,
 
 
     const RemoveCard =(p)=>{
+    
     const Deletecard = selectCard.filter(card=>card !== p)
     setselectCard(Deletecard)
     const DeleteCostomer = costomerTickt.filter(costomer=>costomer.title!==p)

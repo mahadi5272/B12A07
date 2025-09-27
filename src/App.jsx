@@ -4,6 +4,9 @@ import Banner from "./banner/Banner";
 import Footer from "./component/Footer/Footer"
 import Functionality from "./component/Functionality/Functionality"
 import { useState } from "react";
+// toasty
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
   
 
@@ -42,17 +45,18 @@ function App() {
     // 
   }
  
-  
+ 
   
   
   return (
     <>
+    
       <Navber></Navber>
       <Banner InProgress={InProgress} Resolve={Resolve}></Banner>
       <Functionality CostomersPromis={CostomersPromis} InProgress={InProgress} setInProgress={setInProgress}   Resolve={Resolve} setResolve={setResolve} TasksResolv={TasksResolv} setTasksResolv={setTasksResolv}   RemoveCostomer={ RemoveCostomer} costomerRemove={costomerRemove} setcostomerRemove={setcostomerRemove}></Functionality>
       <Footer></Footer>
      
-      
+       <ToastContainer />
     </>
   );
 }

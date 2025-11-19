@@ -4,7 +4,7 @@ A quick reference for essential React concepts including JSX, state, props, hook
 
 ---
 # Repsitoru link:https://github.com/mahadi5272/B12A07.git
-# live link :
+# deploy link : b12a07.netlify.app
 ## 1. What is JSX and why is it used?
 
 **JSX (JavaScript XML)** is a syntax extension for JavaScript that allows writing HTML-like code inside JavaScript.  
